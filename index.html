@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PAMELA Fashion - pilihan fashion wanita yang simpel dan elegan.">
+    <title>PAMELA Fashion</title>
+
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#home">PAMELA<span>.</span></a>
+
+            <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Buka menu navigasi" aria-expanded="false">☰</button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Beranda</a>
+                <a href="#products">Produk</a>
+                <a href="#about">Tentang</a>
+                <button class="cart-button" id="cartButton" type="button">
+                    Keranjang <span id="cartCount">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">PAMELA FASHION</p>
+                <h1>Temukan gaya yang<br><em>paling kamu.</em></h1>
+                <p>Pilihan fashion wanita untuk menemani setiap cerita dan aktivitasmu.</p>
+                <a class="primary-button" href="#products">Jelajahi Produk</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="image/Cover Utama.jpeg" alt="Koleksi fashion PAMELA">
+            </div>
+        </section>
+
+        <section class="benefits container">
+            <div>
+                <span class="benefit-icon">✦</span>
+                <div>
+                    <strong>Gaya pilihan</strong>
+                    <p>Desain simpel dan elegan</p>
+                </div>
+            </div>
+
+            <div>
+                <span class="benefit-icon">♡</span>
+                <div>
+                    <strong>Nyaman dipakai</strong>
+                    <p>Untuk aktivitas sehari-hari</p>
+                </div>
+            </div>
+
+            <div>
+                <span class="benefit-icon">⌁</span>
+                <div>
+                    <strong>Mudah dipadukan</strong>
+                    <p>Temukan gaya andalanmu</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section" id="products">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">KOLEKSI PAMELA</p>
+                    <h2>Temukan favoritmu</h2>
+                    <p>Pilih produk dan ukuran yang paling sesuai untukmu.</p>
+                </div>
+
+                <div class="product-tools">
+                    <div class="category-filters" aria-label="Filter kategori">
+                        <button class="filter-button active" type="button" data-category="All">Semua</button>
+                        <button class="filter-button" type="button" data-category="Atasan">Atasan</button>
+                        <button class="filter-button" type="button" data-category="Outer">Outer</button>
+                        <button class="filter-button" type="button" data-category="Bawahan">Bawahan</button>
+                        <button class="filter-button" type="button" data-category="Dress">Dress</button>
+                    </div>
+
+                    <input class="search-input" id="searchInput" type="search"
+                        placeholder="Cari produk..." aria-label="Cari produk">
+                </div>
+
+                <div class="product-grid" id="productGrid"></div>
+                <p class="empty-state" id="emptyState" hidden>
+                    Produk tidak ditemukan. Coba kata kunci lain.
+                </p>
+            </div>
+        </section>
+
+        <section class="promo-section">
+            <div class="container promo-inner">
+                <div>
+                    <p class="eyebrow">YOUR STYLE, YOUR STORY</p>
+                    <h2>Gaya sederhana,<br>kesan istimewa.</h2>
+                </div>
+                <a href="#products" class="light-button">Lihat Koleksi</a>
+            </div>
+        </section>
+
+        <section class="about-section container" id="about">
+            <div class="about-mark">P.</div>
+            <div>
+                <p class="eyebrow">TENTANG PAMELA</p>
+                <h2>Fashion yang dekat dengan keseharianmu.</h2>
+                <p>
+                    PAMELA adalah website demo e-commerce fashion wanita yang membantu
+                    pengunjung melihat koleksi, memilih ukuran, dan mencoba alur
+                    keranjang belanja secara sederhana.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    
+        <section class="order-section" id="order">
+            <div class="container">
+                <div class="order-heading">
+                    <p class="eyebrow">PAMELA FASHION</p>
+                    <h2>Form Pemesanan</h2>
+                    <p>Isi data diri dan catatan pesanan kamu.</p>
+                </div>
+
+                <form id="orderForm" class="order-form">
+                    <div class="form-field">
+                        <label for="customerName">Nama Pembeli</label>
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="customerName"
+                            placeholder="Masukkan nama kamu"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="customerGmail">Gmail</label>
+                        <input
+                            type="Gmail"
+                            id="customerGmail"
+                            name="customerGmail"
+                            placeholder="nama@Gmail.com"
+                            autocomplete="Gmail"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label for="customerAddress">
+                            Alamat Pengiriman <span>(Opsional)</span>
+                        </label>
+                        <textarea
+                            id="customerAddress"
+                            name="customerAddress"
+                            rows="3"
+                            placeholder="Masukkan alamat pengiriman jika diperlukan"
+                            autocomplete="street-address"
+                        ></textarea>
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label for="orderNotes">
+                            Catatan Pesanan <span>(Opsional)</span>
+                        </label>
+                        <textarea
+                            id="orderNotes"
+                            name="orderNotes"
+                            rows="4"
+                            placeholder="Tulis warna pilihan atau catatan lainnya..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-submit full-width">
+                        <button type="submit" class="primary-button">
+                            Kirim Pesanan
+                        </button>
+                        <p id="orderMessage" role="status" aria-live="polite"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true"
+        aria-label="Keranjang belanja">
+        <div class="cart-header">
+            <div>
+                <p class="eyebrow">PAMELA FASHION</p>
+                <h2>Keranjang Kamu</h2>
+            </div>
+            <button class="icon-button" id="closeCart" type="button"
+                aria-label="Tutup keranjang">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Keranjang kamu masih kosong.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="subtotal-row">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">Rp0</strong>
+            </div>
+            <p class="cart-note">
+                Periksa ukuran dan jumlah produk sebelum checkout.
+            </p>
+            <button class="primary-button checkout-button" id="checkoutButton" type="button">
+                Checkout Demo
+            </button>
+        </div>
+    </aside>
+
+    <div class="toast-message" id="toast" role="status" aria-live="polite"></div>
+
+    <footer class="site-footer">
+        <div class="container text-center py-4">
+            <p class="footer-brand mb-1">Website PAMELA Fashion</p>
+            <p class="mb-1">
+                Dibuat oleh: Aura Mariyana Inayah P.H | A12.2025.07384
+            </p>
+            <p class="mb-0">
+                 <span id="year"></span> PAMELA.
+            </p>
+        </div>
+    </footer>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
